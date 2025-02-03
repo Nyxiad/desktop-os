@@ -7,7 +7,7 @@ description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
-image-version: latest # latest is also supported if you want new updates ASAP
+image-version: 41 ### Make sure you update the signal repo URL
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -20,7 +20,7 @@ modules:
   - type: rpm-ostree
     repos:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-      - https://download.opensuse.org/repositories/network:/im:/signal/Fedora_%OS_VERSION%/network:im:signal.repo
+      - https://download.opensuse.org/repositories/network:/im:/signal/Fedora_41/network:im:signal.repo
     install:
       - chromium
       - libavcodec-freeworld
