@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Obsidian
+Exec=/usr/bin/Obsidian-1.8.4.AppImage --no-sandbox %U
+TryExec=/usr/bin/Obsidian-1.8.4.AppImage
+Icon=/usr/share/icons/obsidian.png
+Terminal=false
+Type=Application
+
+StartupWMClass=Obsidian
+Comment=Obsidian
+MimeType=x-scheme-handler/obsidian;
+Categories=Office;
