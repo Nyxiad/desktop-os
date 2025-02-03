@@ -44,5 +44,11 @@ modules:
         - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
 
+  - type: script
+    snippets:
+      # Setup Obsidian AppImage
+      - "wget -P /usr/bin $(wget -q -O - https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest | jq -r '.assets[] | select(.name | contains ("AppImage")) | del(.. | select(. | tostring | contains ("arm64"))) | .browser_download_url')"
+      - "wget -P /usr/share/icons https://bhs.gg/linux-desktop-image-resources/obsidian.png"
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
